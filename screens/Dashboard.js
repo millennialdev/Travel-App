@@ -179,7 +179,7 @@ const Dashboard = ({ navigation }) => {
 		const currentIndex = parseInt(placesScrollPosition, 10) + 1;
 
 		//  Navigate to the next screen
-		console.log(places[currentIndex]);
+		// console.log(places[currentIndex]);
 		navigation.navigate('Place', { selectedPlace: places[currentIndex] });
 	}
 
@@ -208,6 +208,9 @@ const Dashboard = ({ navigation }) => {
 					var position = (
 						event.nativeEvent.contentOffset.x / PLACES_ITEM_SIZE
 					).toFixed(0);
+
+					// Set Place Scroll Position
+					setPlacesScrollPosition(position);
 				}}
 				renderItem={({ item, index }) => {
 					const opacity = placesScrollX.interpolate({
