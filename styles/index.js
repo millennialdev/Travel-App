@@ -1,3 +1,3 @@
-import MapStyle from "./MapStyle";
+import MapStyle from './MapStyle';
 
-export { MapStyle }
+export { MapStyle };
