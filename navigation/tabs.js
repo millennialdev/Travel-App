@@ -1,12 +1,8 @@
 import React from 'react';
-import { View, Image, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import {
-	createBottomTabNavigator,
-	BottomTabBar,
-} from '@react-navigation/bottom-tabs';
-
+import { View, Image, StyleSheet } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Dashboard } from '../screens';
-import { COLORS, FONTS, icons } from '../constants';
+import { COLORS, icons } from '../constants';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +19,7 @@ const Tabs = () => {
 					elevation: 0,
 					backgroundColor: COLORS.black,
 					borderTopColor: 'transparent',
-					height: 80,
+					height: 50,
 				},
 			}}>
 			<Tab.Screen

@@ -279,7 +279,6 @@ const Dashboard = ({ navigation }) => {
 										alignItems: 'center',
 										justifyContent: 'flex-end',
 										marginHorizontal: SIZES.padding,
-										marginBottom: 17,
 									}}>
 									<Text
 										style={{
@@ -292,24 +291,23 @@ const Dashboard = ({ navigation }) => {
 
 									<Text
 										style={{
-											marginBottom: SIZES.padding * 2,
+											marginBottom: SIZES.padding * 2.5,
 											textAlign: 'center',
 											color: COLORS.white,
 											...FONTS.body3,
 										}}>
 										{item.description}
 									</Text>
-
-									<TextButton
-										label='Explore'
-										customContainerStyle={{
-											position: 'absolute',
-											bottom: -20,
-											width: 150,
-										}}
-										onPress={() => exploreButtonHandler()}
-									/>
 								</View>
+								<TextButton
+									label='Explore'
+									customContainerStyle={{
+										position: 'absolute',
+										bottom: -10,
+										width: 150,
+									}}
+									onPress={() => exploreButtonHandler()}
+								/>
 							</Animated.View>
 						);
 					}
@@ -331,7 +329,7 @@ const Dashboard = ({ navigation }) => {
 					<View>{renderCountries()}</View>
 
 					{/* Places */}
-					<View style={{ height: Platform.OS === 'ios' ? 500 : 450 }}>
+					<View style={{ height: Platform.OS === 'ios' ? 500 : 540 }}>
 						{renderPlaces()}
 					</View>
 				</View>
